@@ -1,4 +1,10 @@
 FROM alpine:latest
 
-RUN apk --no-cache add go docker docker-cli-buildx alpine-sdk olm-dev
-RUN go install github.com/golangci/golangci-lint/cmd/golangci-lint@latest
+# emulate golang:alpine
+ENV GOPATH /go
+ENV PATH $GOPATH/bin:$PATH
+RUN mkdir -p "$GOPATH/src" "$GOPATH/bin" && chmod -R 777 "$GOPATH"
+WORKDIR $GOPATH
+
+RUN apk --no-cache add go docker docker-cli-buildx alpine-sdk olm-dev && \
+		go install github.com/golangci/golangci-lint/cmd/golangci-lint@latest
