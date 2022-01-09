@@ -4,9 +4,8 @@
 
 multi
 
-* arm/v7
+* arm32/v7
 * arm64/v8
-* i386
 * amd64
 
 ### included components
