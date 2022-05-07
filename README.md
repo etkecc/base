@@ -11,7 +11,8 @@ multi
 ### included components
 
 * alpine-sdk
-* docker (with buildx)
+* docker-cli
+* docker-cli-buildx
 * go
 * golangci-lint
 * olm-dev
