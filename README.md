@@ -15,7 +15,6 @@ multi
 * go
 * golangci-lint
 * olm-dev
-* openring
 
 ### updates
 
