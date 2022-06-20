@@ -11,9 +11,11 @@ multi
 ### included components
 
 * alpine-sdk
+* emm
 * go
 * golangci-lint
 * olm-dev
+* openring
 
 ### updates
 
