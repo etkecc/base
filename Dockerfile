@@ -10,4 +10,5 @@ WORKDIR $GOPATH
 RUN apk --no-cache add go alpine-sdk olm-dev && \
 		git clone --depth 1 https://gitlab.com/etke.cc/emm.git && \
 		cd emm && make build && mv emm /bin/emm && cd .. && rm -rf emm && \
-		go install github.com/golangci/golangci-lint/cmd/golangci-lint@latest
+		go install github.com/golangci/golangci-lint/cmd/golangci-lint/...@latest && \
+		golang.org/x/vuln/cmd/govulncheck@latest

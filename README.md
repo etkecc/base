@@ -14,6 +14,7 @@ multi
 * emm
 * go
 * golangci-lint
+* govulncheck
 * olm-dev
 
 ### updates
