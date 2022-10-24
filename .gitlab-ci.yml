@@ -1,7 +1,7 @@
 stages:
   - build
 
-base:
+base/build:
   stage: build
   image: jdrouet/docker-with-buildx:stable
   services:
