@@ -1,10 +1,9 @@
-# base image
+# base/build image
 
 ### arch
 
 multi
 
-* arm32/v7
 * arm64/v8
 * amd64
 
@@ -16,6 +15,25 @@ multi
 * golangci-lint
 * govulncheck
 * olm-dev
+
+### updates
+
+updated weekly
+
+# base/app image
+
+### arch
+
+multi
+
+* arm64/v8
+* amd64
+
+### included components
+
+* ca-certificates
+* tzdata
+* olm
 
 ### updates
 
