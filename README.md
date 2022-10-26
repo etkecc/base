@@ -14,6 +14,8 @@ multi
 * go
 * golangci-lint
 * govulncheck
+* hugo
+* lftp
 * olm-dev
 
 ### updates
