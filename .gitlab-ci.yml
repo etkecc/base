@@ -3,7 +3,7 @@ stages:
 
 base/build:
   stage: build
-  image: jdrouet/docker-with-buildx:stable
+  image: ${CI_DEPENDENCY_PROXY_GROUP_IMAGE_PREFIX}/jdrouet/docker-with-buildx:stable
   services:
     - docker:dind
   variables:
@@ -15,7 +15,7 @@ base/build:
 
 base/app:
   stage: build
-  image: jdrouet/docker-with-buildx:stable
+  image: ${CI_DEPENDENCY_PROXY_GROUP_IMAGE_PREFIX}/jdrouet/docker-with-buildx:stable
   services:
     - docker:dind
   variables:
