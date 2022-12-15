@@ -10,5 +10,7 @@ WORKDIR $GOPATH
 RUN apk --no-cache add go alpine-sdk olm-dev lftp hugo && \
 		git clone --depth 1 https://gitlab.com/etke.cc/emm.git && \
 		cd emm && make build && mv emm /bin/emm && cd .. && rm -rf emm && \
+		git clone --depth 1 https://gitlab.com/etke.cc/int/bunny-upload.git && \
+		cd bunny-upload && make build && mv bunny-upload /bin/bunny-upload && cd .. && rm -rf bunny-upload && \
 		go install github.com/golangci/golangci-lint/cmd/golangci-lint/...@latest && \
 		go install golang.org/x/vuln/cmd/govulncheck@latest
