@@ -17,6 +17,7 @@ multi
 * hugo
 * lftp
 * olm-dev
+* bunny-upload
 
 ### updates
 
