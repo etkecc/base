@@ -15,7 +15,6 @@ multi
 * golangci-lint
 * govulncheck
 * hugo
-* lftp
 * olm-dev
 * bunny-upload
 
