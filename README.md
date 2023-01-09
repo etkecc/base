@@ -10,13 +10,14 @@ multi
 ### included components
 
 * alpine-sdk
+* bunny-upload
 * emm
 * go
 * golangci-lint
 * govulncheck
 * hugo
 * olm-dev
-* bunny-upload
+* skopeo
 
 ### updates
 
