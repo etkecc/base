@@ -16,6 +16,7 @@ multi
 * golangci-lint
 * govulncheck
 * hugo
+* just
 * olm-dev
 * skopeo
 
