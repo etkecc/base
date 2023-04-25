@@ -7,7 +7,7 @@ ENV PATH $GOPATH/bin:$PATH
 RUN mkdir -p "$GOPATH/src" "$GOPATH/bin" && chmod -R 777 "$GOPATH"
 WORKDIR $GOPATH
 
-RUN apk --no-cache add go alpine-sdk olm-dev hugo skopeo just && \
+RUN apk --no-cache add go alpine-sdk olm-dev hugo skopeo just npm && \
 		git clone --depth 1 https://gitlab.com/etke.cc/emm.git && \
 		cd emm && just build && mv emm /bin/emm && cd .. && rm -rf emm && \
 		git clone --depth 1 https://gitlab.com/etke.cc/int/bunny-upload.git && \
