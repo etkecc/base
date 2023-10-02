@@ -17,8 +17,11 @@ multi
 * govulncheck
 * hugo
 * just
+* libheif-dev
 * olm-dev
+* pkgconfig
 * skopeo
+* vips-dev
 
 ### updates
 
