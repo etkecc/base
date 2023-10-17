@@ -14,4 +14,6 @@ RUN apk --no-cache add go alpine-sdk olm-dev vips-dev libheif-dev pkgconfig hugo
 		cd bunny-upload && just build && mv bunny-upload /bin/bunny-upload && cd .. && rm -rf bunny-upload && \
 		go install github.com/golangci/golangci-lint/cmd/golangci-lint/...@latest && \
 		go install golang.org/x/vuln/cmd/govulncheck@latest && \
-		rm -rf /root/.cache/*
+		rm -rf /root/.cache/* && \
+		go clean -cache -testcache -modcache -fuzzcache && \
+		find / -name '*.pyc' -exec rm {} \;
