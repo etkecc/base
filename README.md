@@ -11,6 +11,7 @@ multi
 
 * alpine-sdk
 * bunny-upload
+* docker
 * emm
 * go
 * golangci-lint
