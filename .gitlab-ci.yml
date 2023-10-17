@@ -1,6 +1,8 @@
 default:
   image: docker
   services: ['docker:dind']
+  before_script:
+    - apk --no-cache add git
 variables:
   DOCKER_DRIVER: overlay2
   PLATFORMS: linux/arm64/v8,linux/amd64
