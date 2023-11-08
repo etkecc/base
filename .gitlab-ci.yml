@@ -6,18 +6,17 @@ default:
 variables:
   DOCKER_DRIVER: overlay2
   PLATFORMS: linux/arm64/v8,linux/amd64
-  REGISTRY_IMAGE: registry.etke.cc/etke.cc/base
 
 base/build:
   stage: build
   script:
     - docker login -u gitlab-ci-token -p $CI_JOB_TOKEN $CI_REGISTRY
     - docker buildx create --use
-    - docker buildx build --provenance=false --platform ${PLATFORMS} --pull --push -t ${CI_REGISTRY_IMAGE}/build -t ${REGISTRY_IMAGE}/build -f Dockerfile.build .
+    - docker buildx build --provenance=false --platform ${PLATFORMS} --pull --push -t ${CI_REGISTRY_IMAGE}/build -f Dockerfile.build .
 
 base/app:
   stage: build
   script:
     - docker login -u gitlab-ci-token -p $CI_JOB_TOKEN $CI_REGISTRY
     - docker buildx create --use
-    - docker buildx build --provenance=false --platform ${PLATFORMS} --pull --push -t ${CI_REGISTRY_IMAGE}/app -t ${REGISTRY_IMAGE}/app -f Dockerfile.app .
+    - docker buildx build --provenance=false --platform ${PLATFORMS} --pull --push -t ${CI_REGISTRY_IMAGE}/app -f Dockerfile.app .
