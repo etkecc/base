@@ -7,7 +7,7 @@ ENV PATH $GOPATH/bin:$PATH
 RUN mkdir -p "$GOPATH/src" "$GOPATH/bin" && chmod -R 777 "$GOPATH"
 WORKDIR $GOPATH
 
-RUN apk --no-cache add alpine-sdk olm-dev vips-dev libheif-dev pkgconfig hugo skopeo just npm && \
+RUN apk --no-cache add alpine-sdk olm-dev hugo skopeo just npm && \
 		apk --no-cache add go --repository=http://dl-cdn.alpinelinux.org/alpine/edge/community && \
 		wget -O- -nv https://raw.githubusercontent.com/golangci/golangci-lint/master/install.sh | sh -s -- -b $(go env GOPATH)/bin && \
 		git clone --depth 1 https://gitlab.com/etke.cc/tools/emm.git && \
