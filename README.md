@@ -20,6 +20,7 @@ multi
 * just
 * olm-dev
 * skopeo
+* swag
 
 ### updates
 

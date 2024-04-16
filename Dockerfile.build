@@ -10,6 +10,7 @@ WORKDIR $GOPATH
 RUN apk --no-cache add alpine-sdk olm-dev hugo skopeo just npm && \
 		apk --no-cache add go --repository=http://dl-cdn.alpinelinux.org/alpine/edge/community && \
 		wget -O- -nv https://raw.githubusercontent.com/golangci/golangci-lint/master/install.sh | sh -s -- -b $(go env GOPATH)/bin && \
+		go install github.com/swaggo/swag/cmd/swag@latest && \
 		git clone --depth 1 https://gitlab.com/etke.cc/tools/emm.git && \
 		cd emm && just build && mv emm /bin/emm && cd .. && rm -rf emm && \
 		git clone --depth 1 https://gitlab.com/etke.cc/tools/bunny-upload.git && \
