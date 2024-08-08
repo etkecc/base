@@ -34,7 +34,7 @@ jobs:
         with:
           platforms: linux/amd64,linux/arm64
           push: true
-          file: {context}/Dockerfile.build
+          file: Dockerfile.build
           tags: ${{ steps.meta.outputs.tags }}
           labels: ${{ steps.meta.outputs.labels }}
   app:
@@ -61,5 +61,5 @@ jobs:
         with:
           platforms: linux/amd64,linux/arm64
           push: true
-          file: {context}/Dockerfile.app
+          file: Dockerfile.app
           tags: ${{ steps.meta.outputs.tags }}
