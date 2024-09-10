@@ -29,6 +29,8 @@ updated weekly
 
 # base/app image
 
+**discontinued**
+
 ### arch
 
 multi
@@ -44,4 +46,4 @@ multi
 
 ### updates
 
-updated weekly
+not updated anymore
