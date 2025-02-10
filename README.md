@@ -27,10 +27,6 @@ multi
 
 updated weekly
 
-# base/app image
-
-**discontinued**
-
 ### arch
 
 multi
