@@ -27,21 +27,3 @@ multi
 ### updates
 
 updated weekly
-
-### arch
-
-multi
-
-* arm64/v8
-* amd64
-
-### included components
-
-* ca-certificates
-* tzdata
-* olm
-
-### updates
-
-not updated anymore
-
