@@ -11,6 +11,7 @@ multi
 
 * alpine-sdk
 * bunny-upload
+* codespell
 * curl
 * docker
 * emm

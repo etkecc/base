@@ -22,7 +22,7 @@ COPY --from=build /go/bin/emm /go/bin/emm
 COPY --from=build /go/bin/bunny-upload /go/bin/bunny-upload
 WORKDIR $GOPATH
 
-RUN apk --no-cache add alpine-sdk olm-dev hugo skopeo just npm curl go && \
+RUN apk --no-cache add alpine-sdk olm-dev hugo skopeo just npm py3-codespell curl go && \
 		rm -rf /root/.cache/* && \
 		go clean -cache -testcache -fuzzcache && \
 		find / -name '*.pyc' -exec rm {} \;
